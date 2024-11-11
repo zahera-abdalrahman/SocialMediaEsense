@@ -2,16 +2,21 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Email Verification</title>
 </head>
 <body>
-    <p>
-        Hello {{Name}}, <br />
-        Please varify your email address
-    </p>
-    <p>
-        code {{code}}
-    </p>
+    <div class="email-container">
+        <h1>Hello {{Name}},</h1>
+        <p>Thank you for registering with us! We're excited to have you on board. To complete your registration, please verify your email address by using the code below:</p>
 
+        <p class="code">Your Verification Code: {{code}}</p>
+
+        <p>Best regards,</p>
+        <p>The Team</p>
+
+        <div class="footer">
+            <p>Need help? Visit our <a href="#">Help Center</a>.</p>
+        </div>
+    </div>
 </body>
 </html>
