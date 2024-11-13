@@ -49,12 +49,13 @@ namespace SocialMedia.Services
         {
             string path = Path.Combine(_environment.WebRootPath, "EmailTemplate", "email.html");
             var emailBody = await File.ReadAllTextAsync(path);
-            var EmailBody = System.IO.File.ReadAllText(path);
-            EmailBody = EmailBody.Replace("{{Name}}", Name);
-            EmailBody = EmailBody.Replace("{{code}}", RandomCode);
-            await SendEmailAsync(Email, "Confirm Email", emailBody);
 
+            emailBody = emailBody.Replace("{{Name}}", Name);
+            emailBody = emailBody.Replace("{{code}}", RandomCode);
+
+            await SendEmailAsync(Email, "Confirm Email", emailBody);
         }
+
 
 
         public class GenerateRandom

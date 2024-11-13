@@ -23,26 +23,26 @@ namespace SocialMedia.Generic
             await context.SaveChangesAsync();
         }
 
-        public async Task Delete(int Id)
-        {
-            var entity = await context.Set<T>().FindAsync(Id);
-            if (entity == null)
-            {
-                throw new Exception("Entity not found");
-            }
+        //public async Task Delete(int Id)
+        //{
+        //    var entity = await context.Set<T>().FindAsync(Id);
+        //    if (entity == null)
+        //    {
+        //        throw new Exception("Entity not found");
+        //    }
 
-            context.Set<T>().Remove(entity);
-            await context.SaveChangesAsync();
-        }
+        //    context.Set<T>().Remove(entity);
+        //    await context.SaveChangesAsync();
+        //}
 
 
-        public async Task Update(T entity)
-        {
-            context.Set<T>().Attach(entity);
+        //public async Task Update(T entity)
+        //{
+        //    context.Set<T>().Attach(entity);
 
-            context.Entry(entity).State = EntityState.Modified;
-            await context.SaveChangesAsync();
-        }
+        //    context.Entry(entity).State = EntityState.Modified;
+        //    await context.SaveChangesAsync();
+        //}
 
 
 

@@ -7,7 +7,6 @@ namespace SocialMedia.Data
     {
         [Key]
         public int PostId { get; set; }
-        //[Column(TypeName = "date")]
         public DateTime CreatedAt { get; set; }
         [StringLength(50)]
         public string? ContentText { get; set; }

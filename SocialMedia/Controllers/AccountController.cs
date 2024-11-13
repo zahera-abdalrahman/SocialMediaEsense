@@ -43,7 +43,7 @@ namespace SocialMedia.Controllers
                 }
                 else
                 {
-                    return BadRequest(new { message = "Sign up failed" });
+                    return BadRequest(new { message = "This email is already registered" });
                 }
             }
             catch (Exception ex)
@@ -180,27 +180,6 @@ namespace SocialMedia.Controllers
 
 
 
-        //[HttpGet]
-        //[Route("finduser")]
-        //public async Task<IActionResult> FindUser(string username)
-        //{
-        //    try
-        //    {
-        //        var result = await userManager.FindByNameAsync(username);
-        //        if (result != null)
-        //        {
-        //            return Ok(result);
-        //        }
-        //        else
-        //        {
-        //            return BadRequest("User not found");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
-        //    }
-        //}
 
         [HttpPut]
         [Authorize]

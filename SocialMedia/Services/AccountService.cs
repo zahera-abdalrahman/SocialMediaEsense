@@ -33,6 +33,15 @@ namespace SocialMedia.Services
         {
             bool IsSuccess = true;
 
+
+            var existingUser = await userManager.FindByNameAsync(signUpDTO.Email);
+            if (existingUser != null)
+            {
+                IsSuccess = false;
+                return IsSuccess;
+            }
+
+
             User newUser = new User()
             {
                 UserName = signUpDTO.Email,

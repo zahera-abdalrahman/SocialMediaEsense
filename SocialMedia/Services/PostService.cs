@@ -38,16 +38,6 @@ namespace SocialMedia.Services
 
         public async Task Add(PostDTO postDTO, IWebHostEnvironment host)
         {
-            var userId = httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            //string? contentImagePath = null;
-            //if (postDTO.File != null)
-            //{
-            //    contentImagePath = ProcessUploadedFile(postDTO.File, host);
-            //}
-
-            //Post post = mapper.Map<Post>(postDTO);
-
             Post post = new Post()
             {
                 UserId = postDTO.UserId,
@@ -83,7 +73,6 @@ namespace SocialMedia.Services
         public async Task<List<PostDTO>> getAll()
         {
             var posts = await context.posts
-         
         .Include(u => u.User)
         .Include(l => l.like)
             .ThenInclude(l => l.user)

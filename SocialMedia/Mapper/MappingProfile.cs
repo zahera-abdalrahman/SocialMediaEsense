@@ -9,9 +9,9 @@ namespace SocialMedia.Mapper
         public MappingProfile()
         {
             
-            CreateMap<PostDTO, Post>()
-                .ForMember(dest => dest.User, opt => opt.Ignore()); 
-            CreateMap<Post, PostDTO>();
+            //CreateMap<PostDTO, Post>()
+            //    .ForMember(dest => dest.User, opt => opt.Ignore()); 
+            //CreateMap<Post, PostDTO>();
         }
     }
 }

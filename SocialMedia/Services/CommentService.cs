@@ -36,8 +36,6 @@ namespace SocialMedia.Services
 
         public async Task Add(CommentDTO commentDTO)
         {
-            var userId = httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
             Comment comment = new Comment()
             {
                 Content = commentDTO.Content,

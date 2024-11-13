@@ -22,10 +22,5 @@ namespace SocialMedia.DTO
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
 
-        //[Required]
-        //public string RoleName { get; set; }
-
-        //public string ProfileImage { get; set; } = "User/profileMale.png";
-        //public string CoverImage { get; set; } = "User/cover.jpg";
     }
 }
